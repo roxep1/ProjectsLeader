@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ProjectsLeader</string>
+    <string name="loginHint">Логин</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Пароль</string>
+    <string name="loginBtn">Вход</string>
+    <string name="registrationBtn">Регистрация</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

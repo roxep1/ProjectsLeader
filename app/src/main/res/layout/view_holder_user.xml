@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="login"
+            type="String" />
+
+        <variable
+            name="email"
+            type="String" />
+
+        <variable
+            name="isLeader"
+            type="Boolean" />
+
+        <variable
+            name="onCardClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="@{onCardClick}"
+        android:background="@{isLeader? @color/grey: @color/white}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{email}"
+                android:textSize="@dimen/normalText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{login}"
+                android:textSize="@dimen/normalText"
+                android:textAlignment="textEnd"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

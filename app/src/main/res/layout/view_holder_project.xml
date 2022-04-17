@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="onCardClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="onDeleteBtnClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="visibility"
+            type="int" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp"
+        android:onClick="@{onCardClick}">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp">
+            <TextView
+                android:layout_weight="0.15"
+                android:text="@{title}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:onClick="@{onDeleteBtnClick}"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="-"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:visibility="@{visibility}"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
